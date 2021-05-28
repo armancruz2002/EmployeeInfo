@@ -1,0 +1,42 @@
+﻿@model System.Data.DataTable
+
+@{
+    ViewData["Title"] = "Update Employee Record";
+}
+<div style="height: 5px"></div>
+<div class="col-4">
+    <div class="card card-primary">
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form id="quickForm" novalidate="novalidate" method="post" action="@Url.Action("SaveUpdate")">
+            <div class="card-body">
+
+                <div class="form-group">
+                    <label for="EmpID_">Employee ID</label>
+                    <input type="text" name="Id_" class="form-control" id="Id_" placeholder="Id_" value="@Model.Rows[0]["Id"]" readonly="readonly">
+                </div>
+
+                <div class="form-group">
+                    <label for="FirstName_">First Name</label>
+                    <input type="text" name="FirstName" class="form-control" id="FirstName" placeholder="First Name" value="@Model.Rows[0]["FirstName"]">
+                </div>
+
+                <div class="form-group">
+                    <label for="MiddleName_">Middle Name</label>
+                    <input type="text" name="MiddleName" class="form-control" id="MiddleName" placeholder="Middle Name" value="@Model.Rows[0]["MiddleName"]">
+                </div>
+
+                <div class="form-group">
+                    <label for="LastName_">Last Name</label>
+                    <input type="text" name="LastName" class="form-control" id="FirstName" placeholder="Last Name" value="@Model.Rows[0]["LastName"]">
+                </div>
+
+            </div>
+            <input type="hidden" name="Id" value="@Model.Rows[0]["Id"]" />
+
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary" value="Update" name="action"> Save Changes </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+﻿
+
+@{
+    ViewData["Title"] = "Adding Employee Record";
+}
+<div style="height: 5px"></div>
+    <div class="col-4">
+        <div class="card card-primary">
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form id="quickForm" novalidate="novalidate" method="post" action="@Url.Action("InsertRecord")">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="FirstName_">First Name</label>
+                        <input type="text" name="FirstName" class="form-control" id="FirstName" placeholder="First Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="MiddleName_">Middle Name</label>
+                        <input type="text" name="MiddleName" class="form-control" id="MiddleName" placeholder="Middle Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="LastName_">Last Name</label>
+                        <input type="text" name="LastName" class="form-control" id="FirstName" placeholder="Last Name">
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary" value="Submit" name="action"> Submit </button>
+                </div>
+            </form>
+        </div>
+    </div>
